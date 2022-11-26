@@ -1,0 +1,121 @@
+/* ============================== Menu Part Start =================================== */
+#main_menu{
+    padding: 20px 0 !important;
+    position: relative;
+    z-index: 999999;
+    .logo{
+        width: 15%;
+        a{
+            @include text(26px, 700, $hover);
+            line-height: 37px;
+            letter-spacing: -0.03em;
+        }
+    }
+    .menu_part{
+        width: 53%;
+        justify-content: end !important;
+        ul{
+            li{
+                margin-right: 70px;
+                &:last-child{
+                    margin-right: 0;
+                }
+                a{
+                    position: relative;
+                    @include text(16px,500,$text);
+                    text-transform: capitalize;
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
+                    &::before {
+                        @include af_bf();
+                        right: 0;
+                        bottom: 8px;
+                        width: 100%;
+                        height: 3px;
+                        background: $hover;
+                        transform-origin: right center;
+                        transform: scale(0, 1);
+                        transition: transform 0.4s ease;
+                    }
+                    &:hover{
+                        color: $hover;
+                        &::before {
+                            transform-origin: left center;
+                            transform: scale(1, 1);
+                        }
+                    }
+                    &.active{
+                        color: $hover;
+                        &::before {
+                            transform-origin: left center;
+                            transform: scale(1, 1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .search_bar{
+        width: 32%;
+        text-align: end;
+        .navbar-form-search {
+            position: relative;
+            display: inline;
+            width: 80%;
+            .form-control {
+                width: 250px;
+                font-size: 14px !important;
+                float: right;
+                border: none;
+                border-bottom: 1px solid #eee;
+                border-radius: 0;
+                &:focus{
+                    color: $hover;
+                    border-bottom:1px solid $hover;
+                    box-shadow: none;
+                }
+            }
+            .btn {
+                border: 0;
+                background: transparent;
+                font-size: 18px;
+                &:active,
+                &:hover,
+                &:focus {
+                color: #000;
+                outline: none;
+                box-shadow: none;
+                }
+            }
+            
+            .search-form-container {
+                text-align: right;
+                position: absolute;
+                width: 250px;
+                overflow: hidden;
+                background: #fff;
+                right: 60px;
+                top: 0;
+                z-index: 9;
+                transition: all .3s ease-in-out;
+                &.hdn {
+                width: 0;
+                }
+                
+                .search-input-group {
+                width: 250px;
+                }
+            }
+        }
+        a{
+            margin-left: 30px;
+            i{
+                color: #242424;
+                font-size: 18px;
+                
+            }
+        }
+    }
+}
+/* ============================== Menu Part End =================================== */
+

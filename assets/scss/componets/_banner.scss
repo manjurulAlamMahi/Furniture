@@ -1,0 +1,91 @@
+/* ============================== Banner Part Start =================================== */
+#banner{
+    .banner_content{
+        padding: 40px 0 0 0;
+        background: #FFF;
+        position: relative;
+        .banner_img_dots{
+            position: relative;
+            z-index: 2;
+        }
+        .banner_text{
+            position: absolute;
+            top: 60%;
+            left: -115px;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(25px);
+            width: 570px;
+            padding: 75px 100px;
+            h1{
+                line-height: 72px;
+                @include text(54px,900,$hover);
+                letter-spacing: -0.03em;
+                font-family: 'Noto Sans', sans-serif;
+            }
+            p{
+                line-height: 30px;
+                @include text(20px,400,#5F5F64);
+                letter-spacing: 0.01em;
+                font-family: 'google-sans-regula', sans-serif;
+            }
+            z-index: 1;
+        }
+    }
+    .banner_slider{
+        position: relative;
+        .banner_up,
+        .banner_down{
+            position: absolute;
+            right: -35px;
+            z-index: 10;
+            cursor: pointer;
+            color: #242424;
+            @include transition();
+            &:hover{
+                color: $hover;
+            }
+        }
+        .banner_up{
+            top: 30%;
+        }
+        .banner_down{
+            top: 40%;
+        }
+        .slick-dots{
+            position: absolute;
+            right: -31px;
+            top: 60%;
+            li{
+                display: none;
+                position: relative;
+                color: #242424;
+                &.slick-active{
+                    display: block;
+                }
+                button{
+                    background: none;
+                    border: none;
+                }
+                &::after{
+                    position: absolute;
+                    content: '';
+                    left: 50%;
+                    transform: translateY(-50%);
+                    top: 55px;
+                    width: 1px;
+                    background: #B5B5B7;
+                    height: 50px;
+                }
+                &::before{
+                    position: absolute;
+                    
+                    content: '6';
+                    top: 88px;
+                    color: #242424;
+                }
+            }
+        }
+    }
+}
+/* ============================== Banner Part End  =================================== */
