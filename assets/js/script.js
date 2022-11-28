@@ -1,11 +1,6 @@
 $(function () {
   'use strict';
 
-  $('.countup').counterUp({
-    delay: 10,
-    time: 1000
-  });
-
   // Menu fix
 
   var navtop = $('#main_menu').offset().top;
@@ -36,24 +31,14 @@ $(function () {
 
   });
 
-  $(window).scroll(function () {
+  $('.backtodown').click(function () {
+    
+    $('html,body').animate({
+      scrollDown: 0,
+    }, 3000);
 
-    var scrolltop = $(this).scrollTop();
-
-    if (scrolltop > 200) {
-
-      $('.backtotop').addClass('fix_backtotop');
-
-      $('.backtotop').fadeIn('fix_backtotop');
-
-    } else {
-
-      $('.backtotop').removeClass('fix_backtotop');
-
-      $('.backtotop').fadeOut('fix_backtotop');
-
-    }
   });
+
 
   // Slider 
 
@@ -93,46 +78,52 @@ $(function () {
       ]
   });
 
-  $('.engineers_slider').slick({
+  $('.client_slider').slick({
       dots: false,
-      arrows: true,
-      nextArrow: '<i class="fas fa-long-arrow-right port_next"></i>',
-      prevArrow: '<i class="fas fa-long-arrow-left port_prev"></i>',
-      slidesToShow: 3,
+      arrows: false,
+      slidesToShow: 5,
       slidesToScroll: 1,
-      autoplay: false,
+      autoplay: true,
       responsive: [
         {
           breakpoint: 575.98,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 2,
             slidesToScroll: 1,
           }
         },
         {
           breakpoint: 767.98,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 3,
             slidesToScroll: 1,
           }
         },
         {
           breakpoint: 991.98,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 4,
             slidesToScroll: 1,
           }
-        },
+        }
       ]
   });
 
-  // Nice Scroll 
+  // $('.testi_slider_content').slick({
+  //     dots: false,
+  //     arrows: true,
+  //     slidesToShow: 1,
+  //     slidesToScroll: 1,
+  //     autoplay: false,
+  //     nextArrow: '<i class="fas fa-chevron-right testi_down"></i>',
+  //     prevArrow: '<i class="fas fa-chevron-left testi_up"></i>',
+  // });
 
-  $(".niceScroll").niceScroll({
-    cursorborder:"",
-    cursorcolor:"#18A7B9",
-    boxzoom:true
-  });
+  // // Product Navbar
+
+  var containerEl = document.querySelector('.product_list');
+
+  var mixer = mixitup(containerEl);
 
   
   

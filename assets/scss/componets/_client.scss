@@ -1,0 +1,16 @@
+/* ============================== Client Part Start =================================== */
+#client{
+    padding: 55px 0;
+    background: #F4F6F6;
+    .client_header{
+        text-align: center;
+        padding-bottom: 40px;
+        h2{
+            @include text(20px, 500,#031745);
+            letter-spacing: 0.14em;
+            line-height: 25px;
+            font-family: 'google-sans-regula', sans-serif;
+        }
+    }
+}
+/* ============================== Client Part End  =================================== */

@@ -1,0 +1,59 @@
+/* ============================== Service Part Start =================================== */
+#service{
+    padding: 135px 0 110px 0;
+    .service_row{
+        display: flex;
+        justify-content: space-between;
+        .service_col{
+            margin-right: 65px;
+            &.service_col_deal{
+                width: 60.7%;
+            }
+            .service_content{
+                &.service_deal{
+                    h2{
+                        @include text(50px,700,$hover);
+                        line-height: 50px;
+                        font-family: 'Noto Sans', sans-serif;
+                        position: relative;
+                        padding-bottom: 20px;
+                        span{
+                            display: block;
+                        }
+                        .ovrly{
+                            position: absolute;
+                            top: -5px;
+                            left: 120px;
+                        }
+                    }
+                    p{
+                        @include text(16px,400,$text);
+                        line-height: 26px;
+                        font-family: 'google-sans-regula', sans-serif;
+                        padding-right: 60px;
+                    }
+                }
+                .service_text{
+                    h4{
+                        padding: 30px 0 18px 0;
+                        font-weight: 700;
+                        font-size: 20px;
+                        line-height: 28px;
+                        letter-spacing: 0.01em;
+                        color: #3D3D3F;
+                        font-family: 'google-sans-regula', sans-serif;
+                    }
+                    p{
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 26px;
+                        letter-spacing: 0.01em;
+                        color: #0E0E13;
+                        font-family: 'google-sans-regula', sans-serif;
+                    }
+                }
+            }
+        }
+    }
+}
+/* ============================== Service Part End  =================================== */

@@ -1,5 +1,7 @@
 /* ============================== Banner Part Start =================================== */
 #banner{
+    padding-bottom: 70px;
+    position: relative;
     .banner_content{
         padding: 40px 0 0 0;
         background: #FFF;
@@ -85,6 +87,22 @@
                     color: #242424;
                 }
             }
+        }
+    }
+    .backtodown{
+        position: absolute;
+        bottom: 50px;
+        right: 100px;
+        width: 124px;
+        height: 124px;
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(25px);
+        text-align: center;
+        line-height: 130px;
+        cursor: pointer;
+        i{
+            color: #fff;
+            font-size: 50px;
         }
     }
 }
