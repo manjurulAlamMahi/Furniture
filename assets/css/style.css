@@ -43,6 +43,19 @@ li {
 
 /* ==================  Common Part End  ================== */
 /* ============ Menu Fix Start ============= */
+.fix_nav {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 100px 80px rgba(36, 77, 77, 0.1), 0px 64.8148px 46.8519px rgba(36, 77, 77, 0.0759259), 0px 38.5185px 25.4815px rgba(36, 77, 77, 0.0607407), 0px 20px 13px rgba(36, 77, 77, 0.05), 0px 8.14815px 6.51852px rgba(36, 77, 77, 0.0392593), 0px 1.85185px 3.14815px rgba(36, 77, 77, 0.0240741);
+  z-index: 999999999999999;
+  padding: 0 0 0 0 !important;
+  -webkit-animation: topTobottom 0.3s linear;
+          animation: topTobottom 0.3s linear;
+}
+
 /* ============ Menu Fix End ============= */
 @-webkit-keyframes marquee {
   0% {
@@ -74,6 +87,90 @@ li {
   }
   to {
     transform: translateY(0);
+  }
+}
+@-webkit-keyframes rote1 {
+  from {
+    margin-top: 60px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+@keyframes rote1 {
+  from {
+    margin-top: 60px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+@-webkit-keyframes rote2 {
+  from {
+    margin-bottom: 60px;
+  }
+  to {
+    margin-bottom: 0;
+  }
+}
+@keyframes rote2 {
+  from {
+    margin-bottom: 60px;
+  }
+  to {
+    margin-bottom: 0;
+  }
+}
+@-webkit-keyframes rote3 {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  30% {
+    top: 100%;
+    left: 0;
+  }
+  60% {
+    top: 100%;
+    left: 100%;
+  }
+  100% {
+    top: 0;
+    left: 100%;
+  }
+}
+@keyframes rote3 {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  30% {
+    top: 100%;
+    left: 0;
+  }
+  60% {
+    top: 100%;
+    left: 100%;
+  }
+  100% {
+    top: 0;
+    left: 100%;
+  }
+}
+@-webkit-keyframes rote4 {
+  from {
+    margin-bottom: 60px;
+  }
+  to {
+    margin-bottom: 0;
+  }
+}
+@keyframes rote4 {
+  from {
+    margin-bottom: 60px;
+  }
+  to {
+    margin-bottom: 0;
   }
 }
 /* ============================== Menu Part Start =================================== */
@@ -192,6 +289,9 @@ li {
 #main_menu .search_bar a i {
   color: #242424;
   font-size: 18px;
+}
+#main_menu .mobile_menu_button {
+  display: none;
 }
 
 /* ============================== Menu Part End =================================== */
@@ -641,10 +741,17 @@ li {
 #testimonial .testi_slider_content {
   padding-bottom: 115px;
 }
-#testimonial .testi_slider_content .testi_client_img {
+#testimonial .testi_slider_content .testi_slider_item {
+  display: flex;
+  flex-wrap: nowrap;
+}
+#testimonial .testi_slider_content .testi_slider_item .testi_client_img {
+  width: 30%;
+  margin-left: 200px;
+  margin-right: 120px;
   position: relative;
 }
-#testimonial .testi_slider_content .testi_client_img .star {
+#testimonial .testi_slider_content .testi_slider_item .testi_client_img .star {
   position: absolute;
   top: 90px;
   left: -35px;
@@ -657,12 +764,15 @@ li {
   text-align: center;
   line-height: 68px;
 }
-#testimonial .testi_slider_content .testi_client_img .shape {
+#testimonial .testi_slider_content .testi_slider_item .testi_client_img .shape {
   position: absolute;
   bottom: 20px;
   left: -100px;
 }
-#testimonial .testi_slider_content .testi_client_info h4 {
+#testimonial .testi_slider_content .testi_slider_item .testi_client_info {
+  width: 50%;
+}
+#testimonial .testi_slider_content .testi_slider_item .testi_client_info h4 {
   font-size: 26px;
   font-weight: 700;
   color: #244D4D;
@@ -671,7 +781,7 @@ li {
   letter-spacing: -0.03em;
   padding-bottom: 40px;
 }
-#testimonial .testi_slider_content .testi_client_info p {
+#testimonial .testi_slider_content .testi_slider_item .testi_client_info p {
   font-size: 24px;
   font-weight: 500;
   color: #5E7388;
@@ -681,14 +791,14 @@ li {
   padding-bottom: 45px;
   padding-right: 98px;
 }
-#testimonial .testi_slider_content .testi_client_info h6 {
+#testimonial .testi_slider_content .testi_slider_item .testi_client_info h6 {
   font-size: 22px;
   font-weight: 500;
   color: #152137;
   font-family: "google-sans-regula", sans-serif;
   padding-bottom: 5px;
 }
-#testimonial .testi_slider_content .testi_client_info span {
+#testimonial .testi_slider_content .testi_slider_item .testi_client_info span {
   font-size: 14px;
   font-weight: 400;
   color: #647383;
@@ -698,8 +808,15 @@ li {
 #testimonial .testi_slider_content .testi_down,
 #testimonial .testi_slider_content .testi_up {
   position: absolute;
-  right: -35px;
+  bottom: 130px;
   z-index: 10;
+  width: 61px;
+  height: 61px;
+  text-align: center;
+  line-height: 61px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background: #fff;
   cursor: pointer;
   color: #242424;
   transition: all linear 0.3s;
@@ -710,7 +827,14 @@ li {
 }
 #testimonial .testi_slider_content .testi_down:hover,
 #testimonial .testi_slider_content .testi_up:hover {
+  border-color: #DDEDF4;
   color: #244D4D;
+}
+#testimonial .testi_slider_content .testi_up {
+  left: 55%;
+}
+#testimonial .testi_slider_content .testi_down {
+  left: 63%;
 }
 
 /* ============================== Engineers Part End  =================================== */

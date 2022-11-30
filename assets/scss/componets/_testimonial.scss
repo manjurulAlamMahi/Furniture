@@ -49,65 +49,88 @@
     }
     .testi_slider_content{
         padding-bottom: 115px;
-        .testi_client_img{
-            position: relative;
-            .star{
-                position: absolute;
-                top: 90px;
-                left: -35px;
-                width: 68px;
-                height: 68px;
-                border-radius: 50%;
-                background: #FFF;
-                color: rgba(255, 227, 141, 1);
-                font-size: 30px;
-                text-align: center;
-                line-height: 68px;
+        .testi_slider_item{
+            display: flex;
+            flex-wrap: nowrap;
+            .testi_client_img{
+                width: 30%;
+                margin-left: 200px;
+                margin-right: 120px;
+                position: relative;
+                .star{
+                    position: absolute;
+                    top: 90px;
+                    left: -35px;
+                    width: 68px;
+                    height: 68px;
+                    border-radius: 50%;
+                    background: #FFF;
+                    color: rgba(255, 227, 141, 1);
+                    font-size: 30px;
+                    text-align: center;
+                    line-height: 68px;
+                }
+                .shape{
+                    position: absolute;
+                    bottom: 20px;
+                    left: -100px;
+                }
             }
-            .shape{
-                position: absolute;
-                bottom: 20px;
-                left: -100px;
+            .testi_client_info{
+                width: 50%;
+                h4{
+                    @include text(26px,700,$hover);
+                    font-family: 'Noto Sans', sans-serif;
+                    line-height: 37px;
+                    letter-spacing: -0.03em;
+                    padding-bottom: 40px;
+                }
+                p{
+                    @include text(24px,500,#5E7388);
+                    font-style: italic;
+                    line-height: 40px;
+                    font-family: 'google-sans-regula', sans-serif;
+                    padding-bottom: 45px;
+                    padding-right: 98px;
+                }
+                h6{
+                    @include text(22px,500,#152137);
+                    font-family: 'google-sans-regula', sans-serif;
+                    padding-bottom: 5px;
+                }
+                span{
+                    @include text(14px,400,#647383);
+                    font-family: 'google-sans-regula', sans-serif;
+                    letter-spacing: -0.01em;
+                }
             }
         }
-        .testi_client_info{
-            h4{
-                @include text(26px,700,$hover);
-                font-family: 'Noto Sans', sans-serif;
-                line-height: 37px;
-                letter-spacing: -0.03em;
-                padding-bottom: 40px;
-            }
-            p{
-                @include text(24px,500,#5E7388);
-                font-style: italic;
-                line-height: 40px;
-                font-family: 'google-sans-regula', sans-serif;
-                padding-bottom: 45px;
-                padding-right: 98px;
-            }
-            h6{
-                @include text(22px,500,#152137);
-                font-family: 'google-sans-regula', sans-serif;
-                padding-bottom: 5px;
-            }
-            span{
-                @include text(14px,400,#647383);
-                font-family: 'google-sans-regula', sans-serif;
-                letter-spacing: -0.01em;
-            }
-        }
+        
         .testi_down,
         .testi_up{
             position: absolute;
-            right: -35px;
+            bottom: 130px;
             z-index: 10;
+            width: 61px;
+            height: 61px;
+            text-align: center;
+            line-height: 61px;
+            border-radius: 50%;
+            border: 1px solid transparent;
+            background: #fff;
             cursor: pointer;
             color: #242424;
             @include transition();
             &:hover{
+                border-color: #DDEDF4;
                 color: $hover;
             }
+        }
+        .testi_up{
+            left: 55%;
+        }
+        .testi_down{
+            left: 63%;
         }
     }
 }

@@ -14,3 +14,46 @@
         transform: translateY(0);
     }
 }
+
+@keyframes rote1{
+    from{
+        margin-top: 60px;
+    }
+    to{
+        margin-top: 0;
+    }
+}
+@keyframes rote2{
+    from{
+        margin-bottom: 60px;
+    }
+    to{
+        margin-bottom: 0;
+    }
+}
+@keyframes rote3{
+    0%{
+        top: 0;
+        left: 0;
+    }
+    30%{
+        top: 100%;
+        left: 0;
+    }
+    60%{
+        top: 100%;
+        left: 100%;
+    }
+    100%{
+        top: 0;
+        left: 100%;
+    }
+}
+@keyframes rote4{
+    from{
+        margin-bottom: 60px;
+    }
+    to{
+        margin-bottom: 0;
+    }
+}

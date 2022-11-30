@@ -23,6 +23,8 @@ $(function () {
 
   // Bact to Top
 
+  var footer = $('#footer').offset().top;
+
   $('.backtotop').click(function () {
 
     $('html,body').animate({
@@ -34,7 +36,7 @@ $(function () {
   $('.backtodown').click(function () {
     
     $('html,body').animate({
-      scrollDown: 0,
+      scrollTop: footer,
     }, 3000);
 
   });
@@ -55,24 +57,12 @@ $(function () {
       prevArrow: '<i class="fas fa-chevron-up banner_up"></i>',
       responsive: [
         {
-          breakpoint: 575.98,
+          breakpoint: 1101,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 1,
             slidesToScroll: 1,
-          }
-        },
-        {
-          breakpoint: 767.98,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-          }
-        },
-        {
-          breakpoint: 991.98,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 1,
+            vertical:false,
+            verticalSwiping:false,
           }
         }
       ]
@@ -83,7 +73,7 @@ $(function () {
       arrows: false,
       slidesToShow: 5,
       slidesToScroll: 1,
-      autoplay: true,
+      autoplay: false,
       responsive: [
         {
           breakpoint: 575.98,
@@ -109,15 +99,38 @@ $(function () {
       ]
   });
 
-  // $('.testi_slider_content').slick({
-  //     dots: false,
-  //     arrows: true,
-  //     slidesToShow: 1,
-  //     slidesToScroll: 1,
-  //     autoplay: false,
-  //     nextArrow: '<i class="fas fa-chevron-right testi_down"></i>',
-  //     prevArrow: '<i class="fas fa-chevron-left testi_up"></i>',
-  // });
+  $('.testi_slider_content').slick({
+      dots: false,
+      arrows: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: false,
+      nextArrow: '<i class="fas fa-chevron-right testi_down"></i>',
+      prevArrow: '<i class="fas fa-chevron-left testi_up"></i>',
+      responsive: [
+        {
+          breakpoint: 575.98,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        },
+        {
+          breakpoint: 767.98,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        },
+        {
+          breakpoint: 991.98,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        }
+      ]
+  });
 
   // // Product Navbar
 

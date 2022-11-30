@@ -20,9 +20,8 @@
     <!-- ====================== Navigation Part Start ======================= -->
     <nav id="main_menu" class="navbar navbar-expand-lg navbar-expand-md py-lg-0">
         <div class="container" style="background: transparent;">
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="fas fa-list"></span>
+            <button class="btn btn-primary mobile_menu_button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <i class="fa-solid fa-bars-staggered"></i>
             </button>
             <div class="logo">
                 <a href="#">furni.shop</a>
@@ -30,16 +29,16 @@
             <div class="collapse navbar-collapse menu_part" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="">Home</a>
+                        <a class="nav-link" href="#banner">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">About</a>
+                        <a class="nav-link" href="#about_us">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Featurs</a>
+                        <a class="nav-link" href="#product">Product</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Contact</a>
+                        <a class="nav-link" href="#footer">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -54,10 +53,37 @@
                     </div>
                     <button type="submit" class="btn btn-default" id="search-button"><span class="fas fa-search" aria-hidden="true"></span></button>
                 </form>
-                <!-- <a href=""><i class="fa-solid fa-bars-staggered"></i></a> -->
+                <!-- <a href=""></a> -->
+            </div>
+
+            <!-- OFF Canvas -->
+
+            <div class="offcanvas offcanvas-start nav_offcanvas" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header mobile_menu_header">
+                    <a href="#">furni.shop</a>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body mobile_menu_body">
+                    <div class="mobile_navigation" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#banner">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about_us">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#product">Product</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#footer">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>      
+    </nav>
     <!-- ====================== Navigation Part End ======================= -->
 
     <!-- ====================== Banner Part Start ======================= -->
@@ -203,11 +229,11 @@
         <div class="container">
             <div class="about_header">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-12 col-md-8"">
                         <h2>About Us</h2>
                         <p>At Besnik Consultancy, we take pride in our values – service, integrity, and excellence. </p>
                     </div>
-                    <div class="col-lg-6 align-self-center text-end">
+                    <div class="col-lg-6 align-self-center text-end col-12 col-md-4">
                         <a href="#">Learn More</a>
                     </div>
                 </div>
@@ -216,25 +242,25 @@
                 <div class="col-lg-6">
                     <div class="we_do">
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6">
                                 <div class="we_do_content">
                                     <h6><span>1.</span>Who We Are </h6>
                                     <p>You get a 2-week free trial to kick the Smarty tries. We want you to.</p>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6">
                                 <div class="we_do_content">
                                     <h6><span>2.</span>What Do We Do</h6>
                                     <p>We give you a free course that guides you through the process.</p>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6">
                                 <div class="we_do_content">
                                     <h6><span>3.</span>How Do We Help</h6>
                                     <p>We give you a free course that guides you through the process.</p>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6">
                                 <div class="we_do_content">
                                     <h6><span>4.</span>Create success story</h6>
                                     <p>With access to online learning resources anyone can transfrm.</p>
@@ -246,7 +272,7 @@
                 <div class="col-lg-6">
                     <div class="about_gallary">
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-6">
                                 <div class="gal_img gal1">
                                     <img class="img-fluid w-100" src="assets/images/gal1.png" alt="gal1">
                                 </div>
@@ -254,7 +280,7 @@
                                     <img class="img-fluid w-100" src="assets/images/gal3.png" alt="gal3">
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-6">
                                 <div class="gal_img gal3">
                                     <img class="img-fluid w-100" src="assets/images/gal2.png" alt="gal2">
                                 </div>
@@ -275,10 +301,10 @@
         <div class="container">
             <div class="product_header">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-6">
                         <h2>Products</h2>
                     </div>
-                    <div class="col-lg-6 align-self-center text-end">
+                    <div class="col-lg-6 align-self-center text-end col-6">
                         <a href="#">See All <i class="fas fa-long-arrow-right"></i></a>
                     </div>
                 </div>
@@ -293,8 +319,8 @@
                         <li class="control" data-filter=".light">Light</li>
                     </ul>
                     <div class="product_list row">
-                        <div class="mix col-lg-4 product_item light">
-                            <div class="product_item_contexts">
+                        <div class="mix col-lg-4 col-md-6 product_item light">
+                            <div class="product_item_contexts product_item_contexts_fitst_item">
                                 <h6>Hand Base Lamp</h6>
                                 <span>$35.00</span>
                                 <del>$55.00</del>
@@ -304,7 +330,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mix col-lg-4 product_item chair">
+                        <div class="mix col-lg-4 col-md-6 product_item chair">
                             <div class="product_item_contexts">
                                 <h6>Vintage Chair</h6>
                                 <span>$65.00</span>
@@ -315,7 +341,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mix col-lg-4 product_item light">
+                        <div class="mix col-lg-4 col-md-6 product_item light">
                             <div class="product_item_contexts">
                                 <h6>Lamp Tool</h6>
                                 <span>$25.00</span>
@@ -326,7 +352,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mix col-lg-4 product_item sofa">
+                        <div class="mix col-lg-4 col-md-6 product_item sofa">
                             <div class="product_item_contexts">
                                 <h6>Stylish Chair</h6>
                                 <span>$45.00</span>
@@ -337,7 +363,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mix col-lg-4 product_item chair">
+                        <div class="mix col-lg-4 col-md-6 product_item chair">
                             <div class="product_item_contexts">
                                 <h6>Vintage Chair</h6>
                                 <span>$65.00</span>
@@ -348,7 +374,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mix col-lg-4 product_item bed">
+                        <div class="mix col-lg-4 col-md-6 product_item bed">
                             <div class="product_item_contexts">
                                 <h6>Stackable Chair</h6>
                                 <span>$87.00</span>
@@ -395,25 +421,38 @@
                 </div>
             </div>
             <div class="testi_slider_content">
-                <div class="row">
-                    <div class="col-lg-3 offset-lg-2">
-                        <div class="testi_client_img">
-                            <img class="w-100 img-fluid" src="assets/images/client.png" alt="client">
-                            <div class="star">
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="shape">
-                                <img src="assets/images/shape.png" alt="shape">
-                            </div>
+                <div class="testi_slider_item">
+                    <div class="testi_client_img">
+                        <img class="w-100 img-fluid" src="assets/images/client.png" alt="client">
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="shape">
+                            <img src="assets/images/shape.png" alt="shape">
                         </div>
                     </div>
-                    <div class="col-lg-6 offset-lg-1">
-                        <div class="testi_client_info">
-                            <h4>furni.shop</h4>
-                            <p>File storage made easy – including powerful features you won’t find anywhere else. Whether you’re.</p>
-                            <h6>Larry Diamond</h6>
-                            <span>Chief Executive Officer</span>
+                    <div class="testi_client_info">
+                        <h4>furni.shop</h4>
+                        <p>File storage made easy – including powerful features you won’t find anywhere else. Whether you’re.</p>
+                        <h6>Larry Diamond</h6>
+                        <span>Chief Executive Officer</span>
+                    </div>
+                </div>
+                <div class="testi_slider_item">
+                    <div class="testi_client_img">
+                        <img class="w-100 img-fluid" src="assets/images/messi.jpg" alt="messi">
+                        <div class="star">
+                            <i class="fas fa-star"></i>
                         </div>
+                        <div class="shape">
+                            <img src="assets/images/shape.png" alt="shape">
+                        </div>
+                    </div>
+                    <div class="testi_client_info">
+                        <h4>furni.shop</h4>
+                        <p>File storage made easy – including powerful features you won’t find anywhere else. Whether you’re.</p>
+                        <h6>Lionel Messi</h6>
+                        <span>Footballer</span>
                     </div>
                 </div>
             </div>
@@ -426,10 +465,10 @@
         <div class="container">
             <div class="footer_top">
                 <div class="row">
-                    <div class="col-lg-7">
+                    <div class="col-lg-7 col-12">
                         <h2>Start your business today for $0+ state fees.</h2>
                     </div>
-                    <div class="col-lg-5 align-self-center">
+                    <div class="col-lg-5 align-self-center col-12">
                         <a href="#">Get Started</a>
                         <a href="#">Contact Sales</a>
                     </div>
@@ -437,7 +476,7 @@
             </div>
             <div class="footer_bottom">
                 <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-12">
                         <div class="fb_content f_main_content">
                             <h4>furni.shop</h4>
                             <p>Optix seamlessly connects your members with the community, resources.</p>
@@ -449,54 +488,58 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="fb_content">
-                            <h6>Entity types</h6>
-                            <ul>
-                                <li><a href="#">Knowledge base</a></li>
-                                <li><a href="#">Security</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Partners</a></li>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">FAQs</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="fb_content">
-                            <h6>Services</h6>
-                            <ul>
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">Press</a></li>
-                                <li><a href="#">Payrool</a></li>
-                                <li><a href="#">Library</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Help Center</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="fb_content">
-                            <h6>Resources</h6>
-                            <ul>
-                                <li><a href="#">Pricing</a></li>
-                                <li><a href="#">FAQs</a></li>
-                                <li><a href="#">Contact Support</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Terms</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="fb_content">
-                            <h6>Support</h6>
-                            <ul>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Affiliates</a></li>
-                                <li><a href="#">Sitemap</a></li>
-                                <li><a href="#">Cancelation Policy</a></li>
-                                <li><a href="#">Pricing</a></li>
-                            </ul>
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-lg-3 col-6">
+                                <div class="fb_content">
+                                    <h6>Entity types</h6>
+                                    <ul>
+                                        <li><a href="#">Knowledge base</a></li>
+                                        <li><a href="#">Security</a></li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="#">Partners</a></li>
+                                        <li><a href="#">About us</a></li>
+                                        <li><a href="#">FAQs</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <div class="fb_content">
+                                    <h6>Services</h6>
+                                    <ul>
+                                        <li><a href="#">Contact Us</a></li>
+                                        <li><a href="#">Press</a></li>
+                                        <li><a href="#">Payrool</a></li>
+                                        <li><a href="#">Library</a></li>
+                                        <li><a href="#">Blog</a></li>
+                                        <li><a href="#">Help Center</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <div class="fb_content">
+                                    <h6>Resources</h6>
+                                    <ul>
+                                        <li><a href="#">Pricing</a></li>
+                                        <li><a href="#">FAQs</a></li>
+                                        <li><a href="#">Contact Support</a></li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="#">Terms</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <div class="fb_content">
+                                    <h6>Support</h6>
+                                    <ul>
+                                        <li><a href="#">Contact</a></li>
+                                        <li><a href="#">Affiliates</a></li>
+                                        <li><a href="#">Sitemap</a></li>
+                                        <li><a href="#">Cancelation Policy</a></li>
+                                        <li><a href="#">Pricing</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
